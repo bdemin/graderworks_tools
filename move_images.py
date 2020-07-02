@@ -15,3 +15,17 @@ def separate_files(files):
             print('Ignoring', f_name)
     return images, folders
 
+def image_handler(files):
+    # Move all SolidWorks screenshots into corresponding student folders
+
+    images, folders = separate_files(files)
+
+    for image in images:
+        student_name = image.split('_')[0]
+        if student_name in folders:
+            destination = folders[student_name]
+            shutil.move(image, destination)
+            print('Moving', image, 'to', destination)
+        else:
+            print(image, 'has no suitable folder')
+
