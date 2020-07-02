@@ -1,6 +1,9 @@
 import os
 import shutil
 
+from get_root import root
+
+
 def separate_files(files):
     # Separate between images and folders located inside files
     
