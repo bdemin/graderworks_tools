@@ -32,3 +32,9 @@ def image_handler(files):
         else:
             print(image, 'has no suitable folder')
 
+def move_images():
+    files = os.listdir(root)
+    image_handler(files)
+
+if __name__ == '__main__':
+    move_images()
