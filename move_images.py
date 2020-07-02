@@ -2,6 +2,8 @@ import os
 import shutil
 
 def separate_files(files):
+    # Separate between images and folders located inside files
+    
     images = []
     folders = dict()
 
