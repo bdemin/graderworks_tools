@@ -1,3 +1,6 @@
+import os
+import shutil
+
 def separate_files(files):
     images = []
     folders = dict()
